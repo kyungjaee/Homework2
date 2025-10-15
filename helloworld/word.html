@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word of the day</title>
+</head>
+<body>
+   <h1> Word of the day </h1>
+   <div> 
+    <div id = "word">Loading...</div>
+    <div id = "part"></div>
+    <div id = "definition"></div>
+    </div>  
+<script> 
+fetch('/wordRequest')
+.then(response => response.json())
+.then(data => {
+    document.getElementById('word').textContent = data.word;
+    document.getElementById('part').textContent = data.part;    
+    document.getElementById('definition').textContent = data.defintion;
+
+
+
+});
+
+</script>
+
+</body>
+</html>
