@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+ <script>
+class Actor extends Player { 
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+        }
+   class Player extends Actor {
+   
+    constructor(x,y) {
+        super(x,y)
+        This.HP = 100;
+    }    
+    
+    move(horizontal,vertical) {
+        this.x += horizontal;
+        this.y += veritcal;
+    }
+    distanceTo(otherPlayer) {
+        let dx = otherPlayer.x - this.x
+        let dy = otherPlayer.y - this.y
+        let distance = Math.pow(dx, 2) + Math.pow(dy, dx)
+            return distance;
+    
+    }
+}
+
+class Follower extends Actor {
+    constructor(x, y, player) {
+        super(x, y);
+        this.player = player; 
+       }
+    follow(){
+    this.x = player.x;
+    this.y = player.y;
+}
+
+    }
+
+
+
+ </script>   
+
+</body>
+</html>
